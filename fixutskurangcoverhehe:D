@@ -1,0 +1,42 @@
+#include <iostream>
+#include <stdlib.h>
+#include <time.h>
+
+using namespace std;
+int main()
+{ 
+    int angka;   //angka yang ditebak
+    int tebakan; //angka tebakan
+    char lagi;   
+
+    cout << "Selamat datang di Permainan Tebak Angka!" << endl;
+
+    do
+    {cout << "Masukkan angka antara 1-100\n";
+    srand(time(NULL));        //membuat angka random
+    tebakan=rand() % 100 + 1; //mengacak angka antara 1 sampai 100
+        
+        do
+        {
+            cout << "Masukkan angka : ";
+            cin >> angka; 
+        
+            if (angka < tebakan) // fungsi angka<tebakan memungkinkan adanya perulangan
+            {cout << "Angka masih kurang besar! Coba lagi.." << endl;}
+            else if (angka > tebakan) // fungsi angka>tebakan memungkinkan adanya perulangan
+            {cout << "Angka masih kurang kecil! Coba Lagi.." << endl;}
+            else
+            {cout << "Selamat! Anda berhasil menebak angka " << tebakan << endl;}
+            
+        } while (angka!=tebakan);  // jika angka tidak sama dengan random,
+                                   // maka user diminta untuk menginputkan angka kembali.
+
+    cout << "main lagi? y/t \n";
+    cin >> lagi;
+        
+    } while (lagi=='y'); // jika lagi = y, maka permainan akan diulang.
+	                       // perulangan permainan dari awal
+
+    return 0;
+    
+}
