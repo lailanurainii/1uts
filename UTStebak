@@ -30,7 +30,7 @@ int main()
             
         } while (angka!=tebakan);
 
-    cout << "Apakah mau main lagi? y/t \n";
+    cout << "main lagi? y/t \n";
     cin >> lagi;
         
     } while (lagi=='y');
