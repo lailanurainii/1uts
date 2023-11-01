@@ -27,9 +27,9 @@ int main()
             cout << "angka masih kurang kecil! Coba Lagi.." << endl;}
         else
         {
-            cout << "Selamat! Anda berhasil menebak angka " << tebakan << endl;}
+            cout << "Selamat! Anda berhasil menebak angka" << tebakan << endl;}
       
-        } while (angka!=random);
+        } while (angka!=tebakan);
         
         cout << "Main lagi? y/t \n";
         cin >> lagi;
